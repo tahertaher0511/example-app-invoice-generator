@@ -16,14 +16,14 @@ template = env.get_template("invoice_template.html")
 
 with st.form("template_form"):
     left, right = st.columns((1, 10))
-    color = left.color_picker("Color", value="#1f6ef2")
+    color = left.color_picker("Color", value="#f2a31f")
     company_name = right.text_input("Company name", value="TaherIsmail.co")
     left, right = st.columns(2)
     customer_name = left.text_input("Customer name", value="TaherIsmail Corporation")
     customer_address = right.text_input("Customer address", value="Egypt, Alexandria")
-    product_type = left.selectbox("Product type", ["Data app crafting", "ML model training", "Data Analysit", "Data Scientist"])
+    product_type = left.selectbox("Product type", ["Streamlit Crafting","Data app crafting", "ML model training", "Data Analysit", "Data Scientist"])
     quantity = right.number_input("Quantity", 1, 100)
-    price_per_unit = st.slider("Price per unit", 1, 100, 50)
+    price_per_unit = st.slider("Price per unit", 1, 100, 20)
     total = price_per_unit * quantity
     submit = st.form_submit_button()
 
