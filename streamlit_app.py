@@ -16,7 +16,7 @@ template = env.get_template("invoice_template.html")
 
 with st.form("template_form"):
     left, right = st.columns((1, 10))
-    color = left.color_picker("Color", value="#b4cffa")
+    color = left.color_picker("Color", value="#1f6ef2")
     company_name = right.text_input("Company name", value="TaherIsmail.co")
     left, right = st.columns(2)
     customer_name = left.text_input("Customer name", value="TaherIsmail Corporation")
